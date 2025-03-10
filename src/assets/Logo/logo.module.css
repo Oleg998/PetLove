@@ -1,0 +1,47 @@
+.icon {
+  width: 14px;
+  height: 12px;
+}
+.big {
+  width: 36px;
+  height: 30px;
+}
+.text {
+  font-family: Manrope;
+  font-weight: 700;
+  color: var(--dark-gray);
+  letter-spacing: 0.04em;
+  font-size: 20px;
+  line-height: 20px;
+}
+.logoHeaderText {
+  color: var(--white);
+}
+
+.mainLogoText {
+  font-size: 50px;
+  color: var(--white);
+  line-height: 50px;
+}
+
+@media (min-width: 768px){
+  .text {
+  font-size: 28px;
+  line-height: 28px;
+  }
+  .mainLogoText {
+  font-size: 100px;
+  line-height: 100px;
+}
+.icon {
+  width: 18px;
+  height: 16px;
+}
+.big {
+  width: 66px;
+  height: 58px;
+}
+.logoContainer{
+  display: flex;
+  align-items: baseline;}
+}

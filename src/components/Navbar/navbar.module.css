@@ -1,0 +1,37 @@
+.header {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 335px;
+  background: var(--accent);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+}
+
+.container {
+  padding: 18px 20px;
+}
+
+.navlist {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.menuBtn {
+  z-index: 20;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .header {
+    width: 100%;
+    max-width: 704px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .header {
+    width: 100%;
+    max-width: 1216px;
+  }
+  .menuBtn {
+    display: none;
+  }
+}

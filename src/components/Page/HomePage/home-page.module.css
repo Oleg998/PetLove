@@ -1,0 +1,86 @@
+.hero {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 335px;
+}
+.img_container {
+  display: block;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.hero_container {
+  background: var(--accent);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  padding: 48px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.titel {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 24px;
+}
+.sub_titel {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  width: 100%;
+  max-width: 295px;
+}
+.titel_span {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 48px;
+  letter-spacing: -0.03em;
+  color: rgba(255, 255, 255, 0.4);
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .hero {
+    width: 100%;
+    max-width: 704px;
+  }
+  .titel {
+    font-size: 80px;
+    line-height: 77px;
+  }
+  .titel_span {
+    font-size: 80px;
+    line-height: 77px;
+  }
+  .sub_titel {
+    align-self: flex-end;
+    width: 255px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero {
+    width: 100%;
+    max-width: 1216px;
+  }
+  .titel {
+    font-size: 90px;
+    line-height: 87px;
+    margin-bottom: 0;
+  }
+  .titel_span {
+    font-size: 90px;
+    line-height: 87px;
+  }
+  .hero_container {
+    flex-direction: row;
+    align-items: end;
+    padding-left: 64px;
+    padding-right: 64px;
+  }
+}
