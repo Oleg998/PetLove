@@ -2,6 +2,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
+  base: '/petlove/',
   plugins: [react()],
   server: {
     port: 5173, // Налаштовуємо порт для локального сервера
