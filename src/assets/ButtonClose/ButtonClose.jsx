@@ -1,7 +1,5 @@
 import styles from "./button-close.module.css";
 
-import styles from "./button-close.module.css";
-
 const ButtonClose = ({ fill = "var(--dark-gray)" }) => {
   const basePath = import.meta.env.BASE_URL;
 
