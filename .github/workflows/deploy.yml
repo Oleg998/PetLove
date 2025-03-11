@@ -5,25 +5,19 @@ on:
     branches: [main]
 
 jobs:
-  build_and_deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-        
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2.3.1
+
+      - name: Install, build 🔧
+        run: |
+          npm install
+          npm run build
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
         with:
-          node-version: '16'
-        
-      - name: Install dependencies
-        run: npm install
-        
-      - name: Build project
-        run: npm run build
-        
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages  # Гілка, на яку буде здійснено деплой
-          folder: dist      # Директорія, яка буде деплоєна на GitHub Pages
+          branch: gh-pages
+          folder: dist
