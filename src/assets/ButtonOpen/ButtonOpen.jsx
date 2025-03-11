@@ -7,7 +7,7 @@ const ButtonOpen = ({ fill = "var(--dark-gray)" }) => {
     <svg className={styles.icon}>
       <use
         className={styles.icon_menu}
-        href={`${basePath}img/sprite.svg#icon-burger`} 
+        href={`${basePath}img/sprite.svg#icon-burger`}
         style={{ stroke: fill, fill: "inherit" }}
       />
     </svg>
