@@ -11,28 +11,28 @@ const MeinMenu = () => {
   useEffect(() => {
     const updateBackground = () => {
       const isRetina = window.devicePixelRatio > 1;
-
+      const basePath = import.meta.env.BASE_URL; // Отримуємо базовий шлях
+    
       if (window.innerWidth >= 1280) {
         setBgImage(
           isRetina
-            ? "/img/background/background-desktop@2x.jpg"
-            : "/img/background/background-desktop.jpg"
+            ? `${basePath}img/background/background-desktop@2x.jpg`
+            : `${basePath}img/background/background-desktop.jpg`
         );
       } else if (window.innerWidth >= 768) {
         setBgImage(
           isRetina
-            ? "/img/background/background-tablet@2x.jpg"
-            : "/img/background/background-tablet.jpg"
+            ? `${basePath}img/background/background-tablet@2x.jpg`
+            : `${basePath}img/background/background-tablet.jpg`
         );
       } else {
         setBgImage(
           isRetina
-            ? "/img/background/background-mobile@2x.jpg"
-            : "/img/background/background-mobile.jpg"
+            ? `${basePath}img/background/background-mobile@2x.jpg`
+            : `${basePath}img/background/background-mobile.jpg`
         );
       }
     };
-
     updateBackground();
 
     const handleResize = () => {
