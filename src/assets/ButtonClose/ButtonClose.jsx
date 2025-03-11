@@ -1,11 +1,15 @@
 import styles from "./button-close.module.css";
 
+import styles from "./button-close.module.css";
+
 const ButtonClose = ({ fill = "var(--dark-gray)" }) => {
+  const basePath = import.meta.env.BASE_URL;
+
   return (
     <svg className={styles.icon}>
       <use
         className={styles.icon_menu}
-        href={`/img/sprite.svg#icon-not`}
+        href={`${basePath}img/sprite.svg#icon-not`} 
         style={{ stroke: fill, fill: "inherit" }}
       />
     </svg>
@@ -13,3 +17,4 @@ const ButtonClose = ({ fill = "var(--dark-gray)" }) => {
 };
 
 export default ButtonClose;
+

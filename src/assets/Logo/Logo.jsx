@@ -1,7 +1,7 @@
 import styles from "./logo.module.css";
 
 const Logo = ({ color = "var(--accent)", styleText, size }) => {
-  const basePath = import.meta.env.BASE_URL; // Отримуємо базовий шлях
+  const basePath = import.meta.env.BASE_URL;
 
   return (
     <div className={styles.logoContainer}>
