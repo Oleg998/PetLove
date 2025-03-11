@@ -1,16 +1,14 @@
 import styles from "./logo.module.css";
 
-const Logo = ({
-  color = "var(--accent)",
-  styleText,
-  size,
-}) => {
+const Logo = ({ color = "var(--accent)", styleText, size }) => {
+  const basePath = import.meta.env.BASE_URL; // Отримуємо базовий шлях
+
   return (
     <div className={styles.logoContainer}>
       <span className={`${styles.text} ${styles[styleText]}`}>petl</span>
       <svg className={`${styles.icon} ${styles[size]}`}>
         <use
-          href={`/img/sprite.svg#icon-logo`}
+          href={`${basePath}img/sprite.svg#icon-logo`}
           style={{ stroke: "inherit", fill: color }}
         />
       </svg>
@@ -20,3 +18,4 @@ const Logo = ({
 };
 
 export default Logo;
+
