@@ -1,9 +1,14 @@
-import style from "./link.module.css"
-import { NavLink } from "react-router"
+import styles from "./link.module.css";
+import { NavLink } from "react-router-dom";
 
-
-const LinkNav = ({ linkName, navigation }) => {
-  return <NavLink to={navigation} className={style.link}>{linkName}</NavLink>;
+const LinkNav = ({ linkName, navigation, customClass }) => {
+  return (
+    <NavLink
+      to={navigation}
+      className={`${styles.link} ${customClass}` }     >
+      {linkName}
+    </NavLink>
+  );
 };
 
 export default LinkNav;

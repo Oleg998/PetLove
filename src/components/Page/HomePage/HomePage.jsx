@@ -1,24 +1,24 @@
 import Navbar from "../../Navbar/Navbar";
-import style from "./home-page.module.css";
+import styles from "./home-page.module.css";
 
 const HomePage = () => {
   const basePath = import.meta.env.BASE_URL; 
 
   return (
     <>
-      <Navbar />
-      <section className={style.hero}>
-        <div className={style.hero_container}>
-          <h1 className={style.titel}>
-            Take good <span className={style.titel_span}>care</span> of your
+      <Navbar customClass={styles.whiteLink}  />
+      <section className={styles.hero}>
+        <div className={styles.hero_container}>
+          <h1 className={styles.titel}>
+            Take good <span className={styles.titel_span}>care</span> of your
             small pets
           </h1>
-          <p className={style.sub_titel}>
+          <p className={styles.sub_titel}>
             Choosing a pet for your home is a choice that is meant to enrich
             your life with immeasurable joy and tenderness.
           </p>
         </div>
-        <div className={style.img_container}>
+        <div className={styles.img_container}>
           <picture>
             <source
               srcSet={`${basePath}img/hero/heroMob.jpg 1x, ${basePath}img/hero/heroMob@2.jpg 2x`}

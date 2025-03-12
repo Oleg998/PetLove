@@ -1,7 +1,7 @@
 import style from "./mobmenu.module.css";
 import LinkNav from "../../assets/Link/LinkNav";
 
-const MobMenu = ({ activeMenu }) => {
+const MobMenu = ({ activeMenu, customClass  }) => {
   console.log(activeMenu);
   const links = [
     { name: "News", path: "/news" },
@@ -27,6 +27,7 @@ const MobMenu = ({ activeMenu }) => {
           {links.map(({ name, path }) => (
             <li key={path}>
               <LinkNav
+                customClass={customClass}
                 linkName={name}
                 navigation={path}
               />
@@ -38,6 +39,7 @@ const MobMenu = ({ activeMenu }) => {
         {authLinks.map(({ name, path }) => (
           <li key={path}>
             <LinkNav
+              customClass={customClass}
               linkName={name}
               navigation={path}
             />

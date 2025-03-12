@@ -14,11 +14,19 @@
   font-size: 14px;
   line-height: 18px;
   letter-spacing: -0.03em;
-  background-color:var(--white);
+  background-color:inherit;
+  color: var(--dark-gray);
 }
 .link:hover{
     background-color:var(--light-beige);
 }
 .link:global(.active) {
   border: 1px solid rgba(246, 184, 61, 1);
+}
+
+@media (min-width: 1280px) {
+  .link{
+  font-size:16px;
+  line-height: 20px;
+  }
 }

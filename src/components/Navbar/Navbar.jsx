@@ -5,10 +5,8 @@ import ButtonOpen from "../../assets/ButtonOpen/ButtonOpen";
 import Logo from "../../assets/Logo/Logo";
 import ButtonClose from "../../assets/ButtonClose/ButtonClose"
 import MobMenu from "../MobMenu/Mobmenu";
-const Navbar = () => {
+const Navbar = ({ customClass }) => {
   const [openMenu, setOpenMenu] = useState(false);
-
-  
 
   return (
     <header className={styles.header}>
@@ -21,7 +19,10 @@ const Navbar = () => {
             />
           </div>
 
-          <MobMenu activeMenu={openMenu} />
+          <MobMenu
+            activeMenu={openMenu}
+            customClass={customClass}
+          />
           <div
             onClick={() => setOpenMenu(!openMenu)}
             className={styles.menuBtn}
